@@ -22,7 +22,9 @@ export default function Projects(){
               <ul>
                 {p.bullets[lang].map((b,i) => <li key={i}>{b}</li>)}
               </ul>
-              <div className="project-meta">Tech: {p.tech.join(', ')}</div>
+              <div className="tech-badges">
+                {p.tech.map((t, i) => <span key={i} className="tech-badge">{t}</span>)}
+              </div>
             </motion.article>
           ))}
         </div>
