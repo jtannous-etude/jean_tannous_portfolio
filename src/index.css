@@ -69,8 +69,29 @@ details.exp-details .exp-content{padding:12px 16px;border-top:1px solid rgba(3,2
 .tech-badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg, rgba(0,119,204,0.06), rgba(0,179,255,0.03));border:1px solid rgba(0,119,204,0.08);color:var(--primary-700);font-size:0.85rem}
 
 /* Skills */
-.skills-section{padding:36px 0}
+.skills-section{padding:36px 0;background:transparent}
 .skill-tag{display:inline-block;padding:6px 10px;border-radius:999px;margin:6px 6px 0 0;font-size:0.9rem;background:linear-gradient(90deg, rgba(0,119,204,0.06), rgba(0,179,255,0.03));border:1px solid rgba(0,119,204,0.08);color:var(--primary-700)}
+
+/* Card-based layout for skills */
+.skills-columns{display:block}
+@media(min-width:980px){
+	.skills-columns{display:grid;grid-template-columns:1fr 320px;gap:24px}
+}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:12px}
+.skill-card{background:var(--surface);padding:14px;border-radius:10px;box-shadow:0 8px 20px rgba(13,50,75,0.04);border:1px solid rgba(0,0,0,0.04)}
+.skill-card h4{margin:0 0 8px 0}
+.skill-card--large{padding:16px}
+.skill-card--small{padding:10px}
+
+/* per-category accents */
+.skill-card[data-key="development"] h4{color:var(--primary-700)}
+.skill-card[data-key="systems"] h4{color:var(--accent)}
+.skill-card[data-key="databases"] h4{color:#8a5cff}
+.skill-card[data-key="tools"] h4{color:#0a84c9}
+
+.skill-card .skill-card-body{display:flex;flex-wrap:wrap;gap:8px}
+.skill-card .skill-card-body{display:flex;flex-wrap:wrap;gap:8px}
+.qualities-card{background:var(--surface);padding:14px;border-radius:10px;box-shadow:0 8px 20px rgba(13,50,75,0.04);border:1px solid rgba(0,0,0,0.04)}
 
 /* Contact */
 .contact-section{padding:36px 0}

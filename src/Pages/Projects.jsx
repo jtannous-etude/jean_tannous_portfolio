@@ -15,7 +15,20 @@ export default function Projects(){
             <motion.article key={p.id} initial={{ y:20, opacity:0 }} whileInView={{ y:0, opacity:1 }} viewport={{ once:true }} className="project-card">
               {p.image && (
                 <div style={{marginBottom:12}}>
-                  <img src={p.image} alt={p.title[lang]} className="project-image" />
+                  {
+                    (() => {
+                      try {
+                        // normalize image path: prefer bundler-resolved URL (robust for Vite)
+                        const parts = String(p.image).split('/').filter(Boolean)
+                        const filename = parts[parts.length - 1]
+                        const imgUrl = new URL(`../assets/${filename}`, import.meta.url).href
+                        return <img src={imgUrl} alt={p.title[lang]} className="project-image" />
+                      } catch (err) {
+                        // fallback to raw path
+                        return <img src={p.image} alt={p.title[lang]} className="project-image" />
+                      }
+                    })()
+                  }
                 </div>
               )}
               <h3>{p.title[lang]} — <span className="project-meta">{p.org} / {p.year}</span></h3>

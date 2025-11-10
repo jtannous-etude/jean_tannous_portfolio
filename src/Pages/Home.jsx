@@ -17,7 +17,18 @@ export default function Home(){
           </motion.div>
           <motion.div className="hero-image" initial={{ x: 40, opacity:0 }} animate={{ x:0, opacity:1 }} transition={{ duration:0.6 }}>
             <div>
-              <img src="/src/assets/photo.jpg" alt="photo" className="profile-img" />
+              {
+                (() => {
+                  try {
+                    // prefer bundler-resolved URL so Vite resolves the asset correctly
+                    const imgUrl = new URL('../assets/photo.jpg', import.meta.url).href
+                    return <img src={imgUrl} alt="photo" className="profile-img" />
+                  } catch (err) {
+                    // fallback to the original path if resolution fails
+                    return <img src="/src/assets/photo.jpg" alt="photo" className="profile-img" />
+                  }
+                })()
+              }
             </div>
           </motion.div>
         </div>
@@ -49,7 +60,7 @@ export default function Home(){
           </summary>
           <div className="exp-content">
             <div className="project-card" style={{padding:12,margin:0}}>
-              <p style={{margin:0}}>Je travaille pendant chaque vacance scolaire ainsi que l’été. Chargé de l’accueil des clients et de la vente de produits. Aide du boulanger/pâtissier pour réaliser des tâches comme le façonnage, le placage ou encore la création de produits de pâtisserie.</p>
+              <p style={{margin:0}}>Lors de chaque vacance scolaire ainsi que l’été, je travaille dans la boulangerie l'écrin des douceurs. Chargé principalement de l’accueil des clients et de la vente de produits, j'aide également le boulanger/pâtissier à réaliser des tâches comme le façonnage, le placage ou encore la création de produits de pâtisserie. Ce travail m'a permis de découvrir le monde du travail et d'acquérir de nouvelles compétences, notamment dans le travail d'équipe et la relation client.</p>
             </div>
           </div>
         </details>

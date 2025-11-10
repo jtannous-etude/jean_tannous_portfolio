@@ -20,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/jtannous-etude/jean_tannous_portfolio/issues"
   },
-  
   "dependencies": {
     "framer-motion": "^8.0.0",
     "i18next": "^23.0.0",
@@ -30,9 +29,8 @@
     "react-router-dom": "^6.30.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.0.0",
+    "@vitejs/plugin-react": "^4.7.0",
     "gh-pages": "^5.0.0",
-  "postcss": "^8.4.23",
     "vite": "^5.0.0"
   }
 }
