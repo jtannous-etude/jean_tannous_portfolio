@@ -1,0 +1,8 @@
+{
+  "nav": { "home": "Accueil", "projects": "Projets", "skills": "Compétences", "contact": "Contact" },
+  "hero": { "title": "Jean Tannous — Étudiant en informatique", "subtitle": "Bachelor Universitaire de Technologie, La Rochelle", "cta": "Voir mes projets" },
+  "about": { "p1": "J’ai 18 ans et je suis étudiant en Bachelor Universitaire de Technologie en Informatique à La Rochelle.", "p2": "Passionné par l'innovation technologique et l'engagement professionnel, mon objectif est d'aider les entreprises à développer leurs compétences." },
+  "projects": { "title": "Projets", "list": [] },
+  "skills": { "title": "Compétences" },
+  "contact": { "title": "Contact", "email": "tjean0909@gmail.com", "phone": "06 18 73 01 15", "download_cv": "Télécharger mon CV" }
+}

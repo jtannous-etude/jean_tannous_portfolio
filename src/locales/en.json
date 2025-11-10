@@ -1,0 +1,8 @@
+{
+  "nav": { "home": "Home", "projects": "Projects", "skills": "Skills", "contact": "Contact" },
+  "hero": { "title": "Jean Tannous — Computer Science Student", "subtitle": "Bachelor, University of La Rochelle", "cta": "See my projects" },
+  "about": { "p1": "I am 18 years old and a Computer Science student at the University of La Rochelle.", "p2": "Passionate about technological innovation and professional engagement, I aim to help companies develop their skills." },
+  "projects": { "title": "Projects", "list": [] },
+  "skills": { "title": "Skills" },
+  "contact": { "title": "Contact", "email": "tjean0909@gmail.com", "phone": "+33 6 18 73 01 15", "download_cv": "Download my CV" }
+}

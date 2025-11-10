@@ -1,0 +1,68 @@
+:root{--bg:#f6fbff;--surface:#ffffff;--text:#063043;--primary-500:#0077cc;--primary-700:#005a9c;--accent:#00b3ff;--muted:#55707a;--shadow:0 8px 24px rgba(3,24,36,0.06);--radius:12px;--container-width:1100px;--gap:24px}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;font-family:Inter,'Nunito Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial;font-size:16px;line-height:1.6;color:var(--text);background:linear-gradient(180deg,var(--bg),#eef8ff);}
+
+/* subtle futuristic grid */
+/* remove decorative overlays for a clean light theme */
+body::before, body::after{display:none}
+
+/* App layout */
+.app{min-height:100vh;display:flex;flex-direction:column}
+.main-content{flex:1}
+
+/* Container */
+.container{width:100%;max-width:var(--container-width);margin:0 auto;padding:24px}
+
+/* Header / Nav */
+.site-header{width:100%;background:transparent;border-bottom:1px solid rgba(5,40,55,0.06);backdrop-filter:blur(4px);position:sticky;top:0;z-index:40}
+.nav-inner{max-width:var(--container-width);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.nav-links{display:flex;gap:16px;align-items:center}
+.nav-logo{font-weight:800;color:var(--primary-700);text-decoration:none;font-family:Inter, 'Segoe UI', sans-serif;letter-spacing:0.6px;padding:6px 10px;border-radius:8px}
+.nav-link{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav-link:hover{color:var(--primary-500);background:linear-gradient(90deg, rgba(0,179,255,0.06), rgba(0,119,204,0.03))}
+.lang-toggle{border:1px solid rgba(5,40,55,0.06);background:transparent;padding:8px 12px;border-radius:10px;color:var(--primary-700);cursor:pointer}
+
+/* Hero */
+.hero{padding:36px 0}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
+@media(min-width:768px){.hero-grid{grid-template-columns:1fr 360px}}
+.hero-content h1{margin:0 0 12px 0;font-size:clamp(1.25rem,2.2vw,2rem)}
+.hero-content p{margin:0 0 16px 0;color:var(--muted)}
+.btn{display:inline-block;padding:10px 18px;border-radius:12px;color:#fff;background:linear-gradient(90deg,var(--primary-500),var(--primary-700));text-decoration:none;box-shadow:0 8px 20px rgba(3,24,36,0.06);border:1px solid rgba(0,0,0,0.04);font-weight:700}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(3,24,36,0.08)}
+.hero-image{display:flex;justify-content:center}
+.profile-img{width:260px;height:260px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+
+/* Projects */
+.projects-section{padding:36px 0}
+.projects-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:768px){.projects-grid{grid-template-columns:1fr 1fr}}
+.project-card{background:var(--surface);padding:18px;border-radius:12px;box-shadow:var(--shadow);border-left:4px solid rgba(0,119,204,0.06);transition:transform .18s ease,box-shadow .18s ease}
+.project-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(3,24,36,0.08)}
+.project-card h3{margin:0 0 8px 0}
+.project-meta{color:var(--muted);font-size:0.9rem}
+
+/* Make project images larger and visible; override inline height with important */
+.project-card img{width:100%;height:200px !important;object-fit:cover;border-radius:10px;display:block;box-shadow:0 6px 18px rgba(3,24,36,0.06);border:1px solid rgba(0,0,0,0.04)}
+@media(min-width:768px){.project-card img{height:240px !important}}
+
+.project-card .project-meta{color:var(--muted)}
+
+/* Skills */
+.skills-section{padding:36px 0}
+.skill-tag{display:inline-block;padding:6px 10px;border-radius:999px;margin:6px 6px 0 0;font-size:0.9rem;background:linear-gradient(90deg, rgba(0,119,204,0.06), rgba(0,179,255,0.03));border:1px solid rgba(0,119,204,0.08);color:var(--primary-700)}
+
+/* Contact */
+.contact-section{padding:36px 0}
+.contact-card{background:var(--surface);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(3,24,36,0.04);border:1px solid rgba(3,24,36,0.06);color:var(--text)}
+.contact-card a{color:var(--primary-700);text-decoration:none}
+
+/* Footer */
+.site-footer{background:transparent;padding:28px 0;color:var(--muted)}
+.site-footer .container{padding:0}
+
+@media(max-width:640px){.container{padding:16px}.nav-inner{padding:12px}}
+
+/* end */
